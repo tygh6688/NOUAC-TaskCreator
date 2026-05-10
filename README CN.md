@@ -32,36 +32,29 @@ pip install pywin32 winshell
 
 ---
 
-## 🚀 Usage | 使用方法
-Download the attached NOUAC-TaskCreator.exe
-Right-click → Run as administrator
-Select any .exe application
-The task and shortcut will be created automatically
-下载附件中的 NOUAC-TaskCreator.exe
-右键文件 → 以管理员身份运行
-选择任意需要自启的 exe 程序
-程序自动创建计划任务和桌面快捷方式
+## 🚀 使用说明
+下载附件中的 NOUAC-TaskCreator.exe 文件
+右键点击该文件，选择 “以管理员身份运行”
+选择任意可执行的.exe 应用程序
+程序将自动创建系统计划任务和桌面快捷方式
 
 ---
 
-## ⚙️ Task Configuration | 任务配置详情
-表格
-Setting	English Description	中文说明
-Trigger	On user logon	用户登录系统时
-Privilege	Highest available	系统最高可用权限
-Power Restriction	None	无电池 / 电源限制
-Compatibility	Windows 10 / 11	兼容 Win10 / Win11
-Shortcut Command	schtasks /run /tn "TaskName"	双击快捷方式即可立即执行任务
+## ⚙️ 任务配置详情
+| 配置项 | 说明 |
+|--------|------|
+| 触发条件 | 用户登录系统时 |
+| 运行权限 | 系统最高可用权限 |
+| 电源限制 | 无电池或电源限制 |
+| 系统兼容性 | Windows 10 / Windows 11 |
+| 快捷方式命令 | schtasks /run /tn "TaskName" |
 
 ---
 
-## ⚠️ Important Notes | 重要说明
-Must run as administrator, otherwise task creation will fail
-Auto skip UAC popup via system highest privilege schedule task
-Desktop shortcut auto created for one-click manual run
-必须以管理员身份启动程序，否则无法创建高权限任务
-通过系统最高权限计划任务机制，实现无 UAC 弹窗后台自启
-自动生成桌面快捷方式，随时可以双击手动启动程序
+## ⚠️ 重要说明
+必须以管理员身份运行程序，否则无法创建任务。
+通过 Windows 最高权限计划任务机制，绕过 UAC 弹窗。
+系统会自动生成桌面快捷方式，可随时手动一键启动。
 
 ---
 
