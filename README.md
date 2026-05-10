@@ -26,3 +26,35 @@ A lightweight Windows utility to create **privileged scheduled tasks** with one-
 Install required dependencies first:
 ```bash
 pip install pywin32 winshell
+```
+
+---
+
+## 🚀 Usage
+Download the attached NOUAC-TaskCreator.exe  
+Right-click the file and select Run as administrator  
+Select any executable .exe application  
+The program will automatically create a system scheduled task and a desktop shortcut
+
+---
+
+## ⚙️ Task Configuration
+| Setting | English Description |
+|---------|---------------------|
+| Trigger | On user logon |
+| Privilege | Highest available system authority |
+| Power Restriction | No battery or power limitations |
+| Compatibility | Windows 10 / Windows 11 |
+| Shortcut Command | schtasks /run /tn "TaskName" |
+
+---
+
+## ⚠️ Important Notes
+The program must be run as administrator, otherwise task creation will fail.  
+Bypass UAC prompts by using Windows highest-privilege scheduled task mechanism.  
+A desktop shortcut is automatically generated for manual one-click startup at any time.
+
+---
+
+## 📄 License
+MIT License - Free to use, modify, and distribute, provided the original copyright notice is retained.
